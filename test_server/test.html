@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Unterricht</title>
+
+        <link rel="stylesheet" href="/build/app_default.ad8f22ca.css">
+        <link rel="icon" type="image/x-icon" href="https://unterricht.sh.schulcommsy.de/favicon.ico" />
+    </head>
+    <body id="commsy" class="nav-collapsed">
+                <div id="commsy_navigation" class="uk-hidden-small">
+
+                        <a href="https://unterricht.sh.schulcommsy.de?cid=1963807">
+    <div id="commsy_logo"></div>
+</a>
+
+
+        </div>
+
+                <div id="commsy_offnavigation" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar" mode="slide">
+
+
+            </div>
+        </div>
+
+        <div id="content">
+                        <nav class="uk-navbar uk-navbar-attached">
+                                <div class="uk-navbar-flip">
+                    <div class="uk-navbar-content">
+                                                                            <form name="search" action="/room/5738086/search/results" method="POST" class="uk-search" data-uk-search="{
+    source:'/room/5738086/search/instantresults',
+    delay: 300,
+    msgResultsHeader: 'Beste Treffer',
+    msgMoreResults: 'Mehr Ergebnisse',
+    msgNoResults: 'Keine Treffer gefunden'
+}">
+
+    <input type="search" id="search_phrase" name="search[phrase]" placeholder="Suche im Raum..." class="uk-search-field" />
+    <button type="submit" id="search_submit" name="search[submit]" class="uk-button-primary uk-button">Suchen</button>
+
+    <!-- This is the dropdown, which is injected through JavaScript -->
+    <div class="uk-dropdown uk-dropdown-search">
+        <ul class="uk-nav uk-nav-search">...</ul>
+    </div>
+
+<input type="hidden" id="search__token" name="search[_token]" value="9iGxK1DjNxMImA05QGShAtWOxhvj8Ux-nxCKaR4PDT8" /></form>
+                                            </div>
+
+                                        <div class="uk-navbar-content">
+    <ul class="uk-navbar-nav">
+
+
+
+        <li>
+            <a href="/room/5738086/copy" title="Meine Kopien">
+                <i class="uk-icon-copy"></i>
+                <small id="cs-nav-copy-indicator">
+                                </small>
+            </a>
+        </li>
+
+
+            <li>
+                <a href="/room/5738086/material" title="Meine Ablage">
+                    <i class="uk-icon-folder-open-o"></i>
+                </a>
+            </li>
+
+                            <li>
+                    <a href="/dashboard/5738086" title="Dashboard">
+                        <i class="uk-icon-qrcode"></i>
+                    </a>
+                </li>
+                        </ul>
+</div>
+
+
+                    <div class="uk-navbar-content">
+                        <ul class="uk-navbar-nav">
+                            <li id="navbar_user_icon" class="uk-parent" data-uk-dropdown>
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle" style="height:30px; width:30px;" src="/room/5738086/user/5738087/image" title="Julius Walczynski">
+
+
+                                    <div class="uk-dropdown uk-dropdown-small uk-dropdown-navbar">
+        <ul class="uk-nav uk-nav-navbar">
+                                                <li>
+                        <a href="/room/1963807/user/5738085/personal"><i class="uk-icon-justify uk-icon-user"></i> Account</a>
+                    </li>
+                                                <li class="uk-nav-divider"></li>
+                        <li>
+                <a href="/room/5738086/logout"><i class="uk-icon-justify uk-icon-power-off"></i> Abmelden</a>
+            </li>
+        </ul>
+    </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                                <a href="#commsy_offnavigation" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+
+                                <ul class="uk-navbar-nav">
+                                        <li>
+    <a class="cs-link-highlight" href="/room/5738086/all">
+        Alle Räume
+    </a>
+</li>
+
+                                        <li id="room-navigation" data-uk-dropdown="{mode:'click'}" data-commsy-room-navigation="{
+                        source:'/room/5738086/search/rooms',
+                        minLength: 0,
+                        msgNoResults: 'Keine Treffer gefunden'
+                    }">
+                        <a class="cs-link-highlight">
+                            Meine Räume
+                            <i class="uk-icon-chevron-down"></i>
+                        </a>
+
+                        <!-- This is the dropdown -->
+                        <div class="uk-dropdown uk-dropdown-scrollable uk-dropdown-width-2">
+                            <div class="uk-form">
+                                <input class="uk-margin-bottom uk-width-1-1" type="text" placeholder="Eingrenzen nach z.B. Name, Beschreibung, ModeratorIn, ... ">
+                                <div class="uk-text-center">Die 50 besten Treffer (nach Aktivität und Raumtyp sortiert)</div>
+
+                                <script type="text/autocomplete"><ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                                        {{#items && items.length}}
+                                            {{~items}}
+                                            <li data-url="{{!$item.url}}"{{#$item.disabled}} class="uk-skip uk-text-bold"{{/end}}>
+                                                <a>
+                                                    {{#$item.text == 'project'}}
+                                                        <i class="uk-margin-small-right uk-icon-angle-double-right"></i>
+                                                    {{/end}}
+                                                    {{#$item.text == 'community'}}
+                                                        <i class="uk-margin-small-right uk-icon-angle-right"></i>
+                                                    {{/end}}
+                                                    {{ $item.title }}
+                                                </a>
+                                            </li>
+                                            {{/items}}
+                                        {{/end}}
+                                        {{^items.length}}
+                                            {{#msgNoResults}}<li class="uk-skip"><a>{{msgNoResults}}</a></li>{{/msgNoResults}}
+                                        {{/end}}
+                                    </ul></script>
+                            </div>
+
+                            <div class="loading uk-text-center uk-margin-small-top uk-container-center">
+                                <i class="uk-icon-spinner uk-icon-small uk-icon-spin"></i>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <img id="room-logo-navbar" src="/room/5738086/logo">
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- breadcrumb -->
+                <ul id="wo-breadcrumbs" class="uk-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="uk-display-inline uk-display-inline" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://unterricht.sh.schulcommsy.de?cid=1963807" itemprop="item"><span itemprop="name">Unterricht</span></a><meta itemprop="position" content="1" /><span class='separator'></span></li><li class="uk-display-inline uk-display-inline" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">Dashboard</span><meta itemprop="position" content="2" /></li></ul>
+
+            <!-- cover -->
+
+            <!-- container -->
+            <div id="container" class="uk-container uk-margin-large-bottom">
+                    <div id="dashboard-cover" aria-hidden="false">
+        <h1 class="uk-h2">Dashboard</h1>
+    </div>
+
+    <div class="uk-grid uk-grid-match" data-uk-grid-margin>
+
+
+
+                <div class="uk-width-medium-1-2 uk-push-1-2">
+
+            <div class="uk-panel uk-panel-box uk-panel-box-primary">
+            <div class="uk-panel-teaser cs-panel-teaser-primary">
+                <div class="uk-flex uk-flex-middle uk-flex-space-between">
+                    <div class="uk-text-large">Kalender</div>
+
+                                                                                                 </div>
+            </div>
+
+            <div id='calendarDashboard' data-events='{"url": "/room/5738086/date/eventsdashboard", "dateUrl": ""}' data-height='400' data-confirm-change='Termin ändern' data-confirm-change-cancel='Abbrechen' data-confirm-change-ok='Ok' data-translations='{"prevYear": "vorheriges Jahr", "prev": "vorheriger Monat / Woche / Tag", "next": "nächster Monat / Woche / Tag", "nextYear": "nächstes Jahr", "date": "Termin", "recurringDate": "Serientermin", "place": "Ort", "participants": "Teilnehmer", "calendar": "Kalender"}' data-options='{"locale": "de" }'></div>
+        </div>
+
+                        <div class="uk-panel uk-panel-box uk-panel-box-primary">
+            <div class="uk-panel-teaser cs-panel-teaser-primary">
+                <div class="uk-flex uk-flex-middle">
+                    <div class="uk-text-large">Freigegebene Einträge</div>
+                 </div>
+            </div>
+
+
+<ul class="uk-tab" data-uk-tab="{connect:'#external-access-contet'}">
+    <li><a href="">Meine freigegebenen Einträge</a></li>
+    <li><a href="">Andere freigegebene Einträge</a></li>
+</ul>
+
+<!-- This is the container of the content items -->
+<ul id="external-access-contet" class="uk-switcher uk-margin">
+    <li>
+                    Keine Einträge
+            </li>
+    <li>
+                    Keine Einträge
+            </li>
+</ul>
+        </div>
+
+        </div>
+
+                <div class="uk-width-medium-1-2 uk-pull-1-2 uk-row-first">
+                <div class="uk-panel uk-panel-box uk-panel-box-primary">
+        <div class="uk-panel-teaser cs-panel-teaser-primary">
+            <div class="uk-flex uk-flex-middle">
+                <div class="uk-text-large">Räume</div>
+             </div>
+        </div>
+        <form action="/room/5738086/all" class="uk-form-horizontal uk-form">
+            <input type="text" name="room_filter[title]" placeholder="Titel, ModeratorIn, Beschreibung" style="min-width:225px;">
+            <button type="submit" class="uk-button uk-button-primary">Raumsuche</button>
+        </form>
+        <ul class="uk-list">
+            <li>
+                <a class="uk-comment-title cs-link-highlight" href="/room/5738086/all">Liste aller Räume</a>
+            </li>
+            <li>
+                <a class="uk-comment-title cs-link-highlight" href="/room/5738086/all?room_filter%5Bmembership%5D=1">Liste meiner Räume</a>
+            </li>
+                            <li>
+                    <a class="uk-comment-title cs-link-highlight" href="/room/5738086/all/create">Neuen Raum anlegen</a>
+                </li>
+                    </ul>
+    </div>
+
+                        <div class="uk-panel uk-panel-box uk-panel-box-primary">
+            <div class="uk-panel-teaser cs-panel-teaser-primary">
+                <div class="uk-flex uk-flex-middle">
+                    <div class="uk-text-large">Die neuesten Einträge aus meinen Räumen</div>
+                 </div>
+            </div>
+
+            <div class="feed">
+                <ul id="dashboard-feed" class="uk-comment-list">
+                                <article class="uk-comment" data-item-id="6520529">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+                                                                   <div class="cs-comment-change-info" data-uk-tooltip="{pos:'right'}" title="Neuer Eintrag">
+                    <i class="uk-icon-medium uk-text-danger uk-icon-exclamation"></i>
+                </div>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/5607200/user/5780446">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5607200/user/5780446/image" data-uk-tooltip title="Frauke Wandrowsky">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                            Heute, 13:36
+                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5607200">JRG Q1c 19/20</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5607200/material/6520529">
+                                                            Besprechungstermine materialgest. Schreiben                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/5780446/contactForm/app_dashboard_overview">            Frauke Wandrowsky
+    </a>(25.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">
+                <a href="/file/713389/inline" target="_blank" data-uk-tooltip title="Termine_BBB_Besprechung_Materialgestütztes_Schreiben.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6485389">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+                                                                   <div class="cs-comment-change-info" data-uk-tooltip="{pos:'right'}" title="Neuer Eintrag">
+                    <i class="uk-icon-medium uk-text-danger uk-icon-exclamation"></i>
+                </div>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/2045580/user/2299641">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/2045580/user/2299641/image" data-uk-tooltip title="Kristina Balcar">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                23.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/2045580">Johann-Rist-Gymnasium, Wedel</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/2045580/material/6485389">
+                                                            Eja-c Sport Br - Jonglieren lernen                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/2299641/contactForm/app_dashboard_overview">            Kristina Balcar
+    </a>(23.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6471974">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+                                                                   <div class="cs-comment-change-info" data-uk-tooltip="{pos:'right'}" title="Neuer Eintrag">
+                    <i class="uk-icon-medium uk-text-danger uk-icon-exclamation"></i>
+                </div>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/2045580/user/2110884">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/2045580/user/2110884/image" data-uk-tooltip title="Tina Buesser">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                23.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/2045580">Johann-Rist-Gymnasium, Wedel</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/2045580/material/6471974">
+                                                            Interesse an Physik? Infos von der DPG *                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/2110884/contactForm/app_dashboard_overview">            Tina Buesser
+    </a>(23.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6456728">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/5773717/user/5773719">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5773717/user/5773719/image" data-uk-tooltip title="Britt Bollinger">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5773717">JRG Q1ac Geo Bo 2019/20</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5773717/material/6456728">
+                                                            23.04.2020                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/5773719/contactForm/app_dashboard_overview">            Britt Bollinger
+    </a>(22.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6455512">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/5607200/user/5780446">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5607200/user/5780446/image" data-uk-tooltip title="Frauke Wandrowsky">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5607200">JRG Q1c 19/20</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5607200/material/6455512">
+                                                            Deutsch, 23. April                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/5780446/contactForm/app_dashboard_overview">            Frauke Wandrowsky
+    </a>(22.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">
+                <a href="/file/696900/inline" target="_blank" data-uk-tooltip title="Übung_Rechtschreibung_(1).pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+
+                <a href="/file/696901/inline" target="_blank" data-uk-tooltip title="Übung_Rechtschreibung_2.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6447409">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+                                                                   <div class="cs-comment-change-info" data-uk-tooltip="{pos:'right'}" title="Neuer Eintrag">
+                    <i class="uk-icon-medium uk-text-danger uk-icon-exclamation"></i>
+                </div>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/5980552/user/5980554">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5980552/user/5980554/image" data-uk-tooltip title="Bettina Bergen">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5980552">JRG Oberstufentheater AG &quot;Corona-Monolog&quot; 2020</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5980552/material/6447409">
+                                                            &quot;Neue Normalität&quot;                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/5980554/contactForm/app_dashboard_overview">            Bettina Bergen
+    </a>(22.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">
+                <a href="/file/695513" target="_blank" data-uk-tooltip title="IMG_8369.JPG"><i class="            uk-icon-file-image-o
+    "></i></a>
+
+                <a href="/file/695454" target="_blank" data-uk-tooltip title="IMG_8370.MOV"><i class="            uk-icon-file-o
+    "></i></a>
+
+                <a href="/file/695455" target="_blank" data-uk-tooltip title="IMG_8371.JPG"><i class="            uk-icon-file-image-o
+    "></i></a>
+                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6446142">
+            <i class="            uk-icon-comment-o
+     uk-icon-small"></i>
+                                                                   <div class="cs-comment-change-info" data-uk-tooltip="{pos:'right'}" title="Neuer Eintrag">
+                    <i class="uk-icon-medium uk-text-danger uk-icon-exclamation"></i>
+                </div>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/2045580/user/5749096">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/2045580/user/5749096/image" data-uk-tooltip title="Liv Tiede">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/2045580">Johann-Rist-Gymnasium, Wedel</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/2045580/announcement/6446142">
+                                                            Sprechstunde der Medienscouts                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">Von:             Liv Tiede
+    </div>
+                                        <div class="uk-comment-meta">                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6437347">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/5607200/user/5754862">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5607200/user/5754862/image" data-uk-tooltip title="Dorina Schild">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5607200">JRG Q1c 19/20</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5607200/material/6437347">
+                                                            Chemie 22.4 und 29.4.                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/5754862/contactForm/app_dashboard_overview">            Dorina Schild
+    </a>(22.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">
+                <a href="/file/693395/inline" target="_blank" data-uk-tooltip title="Seifenblasen_Herstellung.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+
+                <a href="/file/693396/inline" target="_blank" data-uk-tooltip title="Seifenblasen_Theorie.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="6431394">
+            <i class="            uk-icon-file-o
+     uk-icon-small"></i>
+                                                                   <div class="cs-comment-change-info" data-uk-tooltip="{pos:'right'}" title="Neuer Eintrag">
+                    <i class="uk-icon-medium uk-text-danger uk-icon-exclamation"></i>
+                </div>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                                                <a href="/room/5607200/user/5738714">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5607200/user/5738714/image" data-uk-tooltip title="Silke Stamm">
+
+    </a>
+
+                                                                                            <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5607200">JRG Q1c 19/20</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5607200/material/6431394">
+                                                            Mathe Corona-Tests 22.4. -28.4.                                                     </a>
+                    </h4>
+                                            <div class="uk-comment-meta">
+                                                                <div class="uk-comment-meta">Von: <a href="/room/5738086/user/5738714/contactForm/app_dashboard_overview">            Silke Stamm
+    </a>(22.04.2020)</div>
+
+                        </div>
+                                        <div class="uk-comment-meta">
+                <a href="/file/692264/inline" target="_blank" data-uk-tooltip title="Corona-Test.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+
+                <a href="/file/692258/inline" target="_blank" data-uk-tooltip title="Corona-Test_a.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+
+                <a href="/file/692261/inline" target="_blank" data-uk-tooltip title="Corona-Test_b.pdf"><i class="            uk-icon-file-pdf-o
+    "></i></a>
+                        </div>
+                </div>
+            </header>
+        </article>
+            <article class="uk-comment" data-item-id="5780446">
+            <i class="            uk-icon-user
+     uk-icon-small"></i>
+
+                        <header class="uk-comment-header uk-flex">
+                <div class="uk-margin-right uk-flex-item-none">
+                                                                                <a href="/room/5607200/user/5780446">
+
+
+            <img class="uk-comment-avatar uk-thumbnail uk-border-circle cs-comment-thumbnail" src="/room/5607200/user/5780446/image" data-uk-tooltip title="Frauke Wandrowsky">
+
+    </a>
+
+                                                                <div class="uk-comment-meta">
+                        <span class="uk-text-nowrap">
+                                                                                                22.04.2020
+                                                                                    </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-comment-meta"><a href="/room/5607200">JRG Q1c 19/20</a></div>
+                    <h4 class="uk-comment-title">
+
+                        <a href="/room/5607200/user/5780446">
+                                                                        Frauke Wandrowsky
+
+                                                    </a>
+                    </h4>
+                                            <div class="uk-comment-meta">Von:             Frauke Wandrowsky
+    </div>
+                                        <div class="uk-comment-meta">                        </div>
+                </div>
+            </header>
+        </article>
+
+                </ul>
+            </div>
+
+            <div class="feed-load-more" data-uk-scrollspy="{cls: 'uk-animation-fade', repeat: true, topoffset: 0}" data-feed='{"url": "/dashboard/5738086/feed/", "target": "#dashboard-feed"}'>
+                <i class="uk-icon-refresh uk-icon-spin uk-icon-medium"></i>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+            </div>
+        </div>
+
+                    <script src="/build/runtime.b82e9a70.js"></script><script src="/build/app.60c19198.js"></script>
+            </body>
+</html>
